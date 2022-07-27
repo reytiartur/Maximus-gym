@@ -19,13 +19,13 @@ p {
 li {
     padding: 0;
     list-style-type: none;
-    margin: 0.85rem;
+    margin: .85rem;
 }
 
 a {
     color: white;
     text-decoration: none;
-    padding: 0.25rem;
+    padding: 0.35rem;
 }
 
 .top {
@@ -38,7 +38,7 @@ a {
 .navbar {
     display: flex;
     align-items: center;
-    margin: 0 5rem;
+    margin: 0 6rem;
     height: 85px;
 }
 
@@ -52,7 +52,11 @@ a {
     align-items: center;
     margin-left: auto;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 24px;
+}
+
+.nav-links a:hover {
+    color: var(--complementary-color);
 }
 
 .showcase {
@@ -61,7 +65,11 @@ a {
     flex-direction: column;
     justify-content: center;
     flex: 1;
-    margin: 0 5rem;
+    margin: 0 6rem;
+}
+
+.showcase > * {
+    z-index: 1;
 }
 
 .showcase p {
@@ -84,10 +92,11 @@ h2 {
 }
 
 .showcase-img {
-    width: 400px;
+    width: 450px;
     position: absolute;
     bottom: 0;
     right: 100px;
+    z-index: 0;
 }
 
 button.contact {
@@ -116,7 +125,58 @@ button.contact:hover {
     background: #1a1a1a;
 }
 
-.about {
-    display: grid;
-    
+#about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+h1 {
+    font-size: 50px;
+    font-weight: 900;
+    color: var(--secondary-color);
+    margin: 3rem 0 .25rem 0;
+}
+
+#about > p {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.about-card {
+    border: 2px solid var(--secondary-color);
+}
+
+.about-card:hover {
+    background: var(--secondary-color);
+    color: var(--main-color);
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 700;
+    padding: 1rem 0;
+}
+
+svg {
+    fill: var(--complementary-color);
+}
+
+/* Utilities */
+.cards-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 3rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+    height: 25vh;
+    border-radius: 24px;
+    padding: 0.75rem 1rem;
+    box-shadow: rgba(0, 0, 0, 0.702) 0px 5px 25px;
+}
+
