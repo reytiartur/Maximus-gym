@@ -18,12 +18,12 @@ function prev() {
     let index = Array.from(slides).findIndex(slide => slide.classList.contains('active'));
     slides.forEach(slide => slide.classList.remove("active"));
     let slidesArray = Array.from(slides);
-    console.log(slidesArray)
 
     if(index <= 0) {
         index = slidesArray.length;
     }
     slidesArray[index - 1].classList.add("active");
+    slidesArray[index - 1].style.animationName = "sliderAnimationLeft";
 
     dots.forEach(dot => dot.classList.remove("active-dot"));
     dots[index - 1].classList.add("active-dot");
@@ -35,12 +35,12 @@ function next() {
     let index = Array.from(slides).findIndex(slide => slide.classList.contains('active'));
     slides.forEach(slide => slide.classList.remove("active"));
     let slidesArray = Array.from(slides);
-    console.log(slidesArray)
 
     if(index >= slidesArray.length - 1) {
         index = -1;
     }
     slidesArray[index + 1].classList.add("active");
+    slidesArray[index + 1].style.animationName = "sliderAnimationRight";
 
     dots.forEach(dot => dot.classList.remove("active-dot"));
     dots[index + 1].classList.add("active-dot");

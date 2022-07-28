@@ -11,6 +11,7 @@ body {
     padding: 0;
     color: white;
     background: var(--main-color);
+    overflow-x: hidden;
 }
 
 p {
@@ -226,6 +227,7 @@ svg {
     height: 150px;
     border-radius: 50%;
     grid-area: img;
+    object-fit: fill;
 }
 
 .staff-name {
@@ -241,7 +243,7 @@ svg {
 }
 
 #testimonials {
-    height: 35vh;
+    height: 45vh;
     width: 100%;
     display: flex;
     position: relative;
@@ -258,14 +260,14 @@ svg {
     width: 50%;
     height: 75%;
     gap: 1rem;
-    
     display: none;
 }
 
 .client-photo {
-    width: 125px;
-    height: 125px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
+    object-fit: cover;
 }
 
 .client-name {
@@ -275,7 +277,7 @@ svg {
 
 .client-text {
     text-align: center;
-    height: 40%;
+    height: 30%;
 }
 
 .dot-container {
@@ -296,25 +298,29 @@ svg {
     padding: 0;
 }
 
-.dot-container button:nth-child(1) {
+.dot-container .active-dot {
     background-color: var(--secondary-color);
 }
 
 #testimonials > button {
     position: absolute;
-    background-color: #c83e4d;
+    background-color: var(--complementary-color);
     top: 50%;
     width: 30px;
     height: 30px;
     font-weight: 900;
     font-size: 20px;
-    fill: white;
     border: 1px var(--main-color) solid;
     border-radius: 8px;
     box-shadow: rgba(0, 0, 0, 0.702) 0px 5px 25px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#testimonials > button:hover {
+    color: white;
+    transform: scale(1.3);
 }
 
 #prev {
@@ -328,15 +334,38 @@ svg {
 /* Utilities */
 .contact,
 .about-card,
+button,
 a {
     transition: 250ms ease-in-out;
 }
 
 .active {
     display: flex;
+    animation: 500ms linear;
+    overflow-x: hidden;
 }
 
 button {
     outline: none;
     cursor: pointer;
+}
+
+@keyframes sliderAnimationRight {
+    0% {
+        transform: translateX(150px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes sliderAnimationLeft {
+    0% {
+        transform: translateX(-150px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
