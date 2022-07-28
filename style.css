@@ -2,6 +2,7 @@
     --main-color: #1e1e1e;
     --secondary-color: #fffe88;
     --complementary-color: #c83e4d;
+    --spacing: 6rem;
 }
 
 body {
@@ -38,7 +39,7 @@ a {
 .navbar {
     display: flex;
     align-items: center;
-    margin: 0 6rem;
+    margin: 0 var(--spacing);
     height: 85px;
 }
 
@@ -65,7 +66,7 @@ a {
     flex-direction: column;
     justify-content: center;
     flex: 1;
-    margin: 0 6rem;
+    margin: 0 var(--spacing);
 }
 
 .showcase > * {
@@ -151,8 +152,9 @@ h1 {
 
 .cards-container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin-top: 3rem;
+    margin-inline: var(--spacing);
 }
 
 .about-card {
@@ -170,6 +172,7 @@ h1 {
 .about-card:hover {
     background: var(--secondary-color);
     color: var(--main-color);
+    cursor: alias;
 }
 
 .title {
@@ -237,6 +240,91 @@ svg {
     margin: 0 1rem;
 }
 
+#testimonials {
+    height: 35vh;
+    width: 100%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 50%;
+    height: 75%;
+    gap: 1rem;
+    
+    display: none;
+}
+
+.client-photo {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+}
+
+.client-name {
+    font-size: 28px;
+    color: var(--secondary-color);
+}
+
+.client-text {
+    text-align: center;
+    height: 40%;
+}
+
+.dot-container {
+    width: 10%;
+    margin: 20px auto 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 24px;
+}
+
+.dot-container button {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 3px solid var(--secondary-color);
+    background-color: transparent;
+    padding: 0;
+}
+
+.dot-container button:nth-child(1) {
+    background-color: var(--secondary-color);
+}
+
+#testimonials > button {
+    position: absolute;
+    background-color: #c83e4d;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    font-weight: 900;
+    font-size: 20px;
+    fill: white;
+    border: 1px var(--main-color) solid;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.702) 0px 5px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#prev {
+    left: 20%;
+}
+
+#next {
+    right: 20%;
+}
+
 /* Utilities */
 .contact,
 .about-card,
@@ -244,3 +332,11 @@ a {
     transition: 250ms ease-in-out;
 }
 
+.active {
+    display: flex;
+}
+
+button {
+    outline: none;
+    cursor: pointer;
+}

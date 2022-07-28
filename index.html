@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 <body>
     <section class="top">
@@ -89,7 +91,39 @@
     <section class="blocker"></section>
 
     <section id="testimonials">
-        
+        <div class="slide active">
+            <img class="client-photo" src="" alt="">
+            <p class="client-name">Name Surname</p>
+            <p class="client-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates accusamus hic dolores, obcaecati itaque expedita perferendis vel soluta voluptatem atque fugiat dolorem nisi libero. Dolorum, ratione.</p>
+        </div>
+
+        <div class="slide">
+            <img class="client-photo" src="" alt="">
+            <p class="client-name">Name Surname</p>
+            <p class="client-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates accusamus hic dolores, obcaecati itaque expedita perferendis vel soluta voluptatem atque fugiat dolorem nisi libero. Dolorum, ratione.</p>
+        </div>
+
+        <div class="slide">
+            <img class="client-photo" src="" alt="">
+            <p class="client-name">Name Surname</p>
+            <p class="client-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates accusamus hic dolores, obcaecati itaque expedita perferendis vel soluta voluptatem atque fugiat dolorem nisi libero. Dolorum, ratione.</p>
+        </div>
+
+        <div class="slide">
+            <img class="client-photo" src="" alt="">
+            <p class="client-name">Name Surname</p>
+            <p class="client-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates accusamus hic dolores, obcaecati itaque expedita perferendis vel soluta voluptatem atque fugiat dolorem nisi libero. Dolorum, ratione.</p>
+        </div>
+
+        <div class="dot-container">
+            <button onclick = "dot(1)"></button>
+            <button onclick = "dot(2)"></button>
+            <button onclick = "dot(3)"></button>
+            <button onclick = "dot(4)"></button>
+        </div>
+
+        <button id="prev" onclick="prev()"><i class="fa fa-solid fa-angle-left fa-lg fa-beat-fade"></i></button>
+        <button id="next" onclick="next()"><i class="fa fa-solid fa-angle-right fa-lg fa-beat-fade"></i></button>
     </section>
 </body>
 </html>
