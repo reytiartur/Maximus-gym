@@ -387,12 +387,23 @@ svg {
     color: var(--main-color);
 }
 
+#contact {
+    height: 65vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
 .contact-container {
     width: 70%;
-    margin: 1rem auto;
+    height: 80%;
     display: flex;
     gap: 2rem;
     border: var(--complementary-color) solid 2px;
+    border-left: none;
     border-radius: 20px;
 }
 
@@ -405,29 +416,48 @@ svg {
 .contact-us {
     background-color: var(--secondary-color);
     padding: 2rem;
+    padding-top: 76px;
     color: var(--main-color);
     border-radius: 20px;
-    min-height: 100%;
+    position: absolute;
+    top: 20px;
+    bottom: 20px;
+    width: 23%;
+}
+
+.contact-us > * {
+    margin-top: 20px;
 }
 
 .contact-us a {
-    color: #1a1a1a;
+    color: #1f2cc0;
+    text-decoration: underline;
+    font-size: 18px;
     font-weight: 700;
     cursor: pointer;
     width: 35%;
 }
 
-.contact-us > span {
-    width: fit-content;
-    height: fit-content;
+.contact-us p {
+    display: inline;
+}
+
+.contact-us i{
+    display: inline-block;
+    font-size: 40px;
+}
+
+.contact-us p,
+.contact-us a {
+    margin-left: 10px;
 }
 
 .book-us {
     padding: 2rem;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    margin-left: 4rem;
+    margin-left: auto;
+    margin-right: 6rem;
 }
 
 label {
